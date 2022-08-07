@@ -81,7 +81,7 @@ def gameLoop():
                     if event.key == pygame.K_SPACE:
                         pipes.pipe_List.clear()
                         bird.bird_rect.center = (50, 256)
-                        bird.bird_move = 0
+                        bird.bird_y_vel = 0
                         game.score = 0
                         game.run = True
             
