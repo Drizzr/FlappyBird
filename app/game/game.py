@@ -16,22 +16,22 @@ class Game:
         self.score = 0
         self.high_score = self.readHighScore()
         self.scoreplus = 0
-        self.bg_surf = pygame.image.load("sprites/background-day.png").convert_alpha()
-        self.start_screen = pygame.image.load("sprites/message.png").convert_alpha()
+        self.bg_surf = pygame.image.load("static/sprites/background-day.png").convert_alpha()
+        self.start_screen = pygame.image.load("static/sprites/message.png").convert_alpha()
         self.start_rec = self.start_screen.get_rect(center = (144,256))
-        self.gameover_screen = pygame.image.load("sprites/gameover.png").convert_alpha()
+        self.gameover_screen = pygame.image.load("static/sprites/gameover.png").convert_alpha()
         self.gameover_rect = self.gameover_screen.get_rect(center = (144,256))
-        self.game_font = pygame.font.Font('text.TTF', 20)
-        self.wing_sound = pygame.mixer.Sound('audio/wing.wav')
-        self.die_sound = pygame.mixer.Sound("audio/hit.wav")
-        self.point_sound = pygame.mixer.Sound("audio/point.wav")
+        self.game_font = pygame.font.Font('static/text.TTF', 20)
+        self.wing_sound = pygame.mixer.Sound('static/audio/wing.wav')
+        self.die_sound = pygame.mixer.Sound("static/audio/hit.wav")
+        self.point_sound = pygame.mixer.Sound("static/audio/point.wav")
         self.Bird = bird
         self.Floor = floor
         self.Pipes = pipes
 
     
     def readHighScore(self):
-        with open("high_score.txt", "r") as datei:
+        with open("static/high_score.txt", "r") as datei:
             return int(datei.read())
 
     def check_collision(self):
@@ -67,6 +67,6 @@ class Game:
     
     def updateHighScore(self):
         if self.score > self.high_score:
-            with open("high_score.txt","w") as file:
+            with open("static/high_score.txt","w") as file:
                     file.write(str(int(self.high_score)))
             

@@ -4,7 +4,7 @@ pygame.init()
 
 class Floor:
     def __init__(self):
-        self.floor_surf = pygame.image.load("sprites/base.png").convert_alpha()
+        self.floor_surf = pygame.image.load("static/sprites/base.png").convert_alpha()
         self.floor_position = 0
 
     def print_floor(self, screen):

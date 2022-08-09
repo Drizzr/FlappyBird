@@ -7,7 +7,7 @@ class Bird:
 
         self.bird_y_vel = 0
         self.bird_movecount = 0 
-        self.bird_surf_list = [pygame.image.load("sprites/bluebird-midflap.png").convert_alpha(), pygame.image.load("sprites/bluebird-downflap.png").convert_alpha(), pygame.image.load("sprites/bluebird-upflap.png").convert_alpha()]
+        self.bird_surf_list = [pygame.image.load("static/sprites/bluebird-midflap.png").convert_alpha(), pygame.image.load("static/sprites/bluebird-downflap.png").convert_alpha(), pygame.image.load("static/sprites/bluebird-upflap.png").convert_alpha()]
         self.bird_rect = self.bird_surf_list[self.bird_movecount//5].get_rect(center = (100,512))
         self.active_bird_surf = None
 

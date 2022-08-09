@@ -6,7 +6,7 @@ pygame.init()
 class Pipes:
 
     def __init__(self):
-        self.pipe_surface = pygame.image.load("sprites/pipe-green.png").convert_alpha()
+        self.pipe_surface = pygame.image.load("static/sprites/pipe-green.png").convert_alpha()
         self.pipe_height = [200, 300, 400]
         self.pipe_List = []
     
